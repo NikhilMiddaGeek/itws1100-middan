@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+<rss version="2.0">
+  <channel>
+    <title>Nikhil Midda - ITWS 1100 Labs Feed</title>
+    <link>/iit/labs/lab03/lab03b/lab_landing.html</link>
+    <description>
+      RSS feed for ITWS 1100 lab landing pages including Lab 01 through Lab 04.
+    </description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Feb 2026 21:00:00 +0000</lastBuildDate>
+    <pubDate>Fri, 27 Feb 2026 21:00:00 +0000</pubDate>
+
+    <item>
+      <title>Lab 01: VM, GitHub and Azure Setup</title>
+      <link>/iit/labs/lab03/lab03b/lab01_landing.html</link>
+      <description>
+        Environment setup workflow including Azure VM, GitHub configuration, and initial deployment setup.
+      </description>
+      <guid isPermaLink="true">/iit/labs/lab03/lab03b/lab01_landing.html</guid>
+      <pubDate>Fri, 27 Feb 2026 20:45:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 02: Semantic HTML Resume</title>
+      <link>/iit/labs/lab03/lab03b/lab02_landing.html</link>
+      <description>
+        Resume development using semantic HTML structure with improved styling and content organization.
+      </description>
+      <guid isPermaLink="true">/iit/labs/lab03/lab03b/lab02_landing.html</guid>
+      <pubDate>Fri, 27 Feb 2026 20:46:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 03: Personal Website</title>
+      <link>/iit/labs/lab03/lab03b/lab03_landing.html</link>
+      <description>
+        Multi-page personal website with consistent layout, navigation, validation, and deployment workflow.
+      </description>
+      <guid isPermaLink="true">/iit/labs/lab03/lab03b/lab03_landing.html</guid>
+      <pubDate>Fri, 27 Feb 2026 20:47:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 03b: AI-Assisted Web Development Enhancement</title>
+      <link>/iit/labs/lab03/lab03b/lab03b_landing.html</link>
+      <description>
+        Five-iteration AI-assisted website enhancement project with reflection and iterative prompt refinement.
+      </description>
+      <guid isPermaLink="true">/iit/labs/lab03/lab03b/lab03b_landing.html</guid>
+      <pubDate>Fri, 27 Feb 2026 20:48:00 +0000</pubDate>
+    </item>
+
+    <item>
+      <title>Lab 04: RSS and Atom Feeds</title>
+      <link>/iit/labs/lab03/lab03b/lab04_landing.html</link>
+      <description>
+        XML feed authoring and validation lab covering RSS 2.0 and Atom 1.0 feed structure and deployment checks.
+      </description>
+      <guid isPermaLink="true">/iit/labs/lab03/lab03b/lab04_landing.html</guid>
+      <pubDate>Fri, 27 Feb 2026 20:49:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

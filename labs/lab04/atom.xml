@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Nikhil Midda - ITWS 1100 Labs Atom Feed</title>
+  <link href="/iit/labs/lab04/atom.xml" rel="self" />
+  <link href="/iit/labs/lab03/lab03b/lab_landing.html" />
+  <id>tag:nikhilmidda,2026:/iit/labs/lab04/atom.xml</id>
+  <updated>2026-02-27T21:00:00Z</updated>
+  <author>
+    <name>Nikhil Midda</name>
+  </author>
+
+  <entry>
+    <title>Lab 01: VM, GitHub and Azure Setup</title>
+    <link href="/iit/labs/lab03/lab03b/lab01_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab01_landing.html</id>
+    <updated>2026-02-27T20:45:00Z</updated>
+    <summary>
+      Environment setup workflow including Azure VM, GitHub configuration, and initial deployment setup.
+    </summary>
+  </entry>
+
+  <entry>
+    <title>Lab 02: Semantic HTML Resume</title>
+    <link href="/iit/labs/lab03/lab03b/lab02_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab02_landing.html</id>
+    <updated>2026-02-27T20:46:00Z</updated>
+    <summary>
+      Resume development using semantic HTML structure with improved styling and content organization.
+    </summary>
+  </entry>
+
+  <entry>
+    <title>Lab 03: Personal Website</title>
+    <link href="/iit/labs/lab03/lab03b/lab03_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab03_landing.html</id>
+    <updated>2026-02-27T20:47:00Z</updated>
+    <summary>
+      Multi-page personal website with consistent layout, navigation, validation, and deployment workflow.
+    </summary>
+  </entry>
+
+  <entry>
+    <title>Lab 03b: AI-Assisted Web Development Enhancement</title>
+    <link href="/iit/labs/lab03/lab03b/lab03b_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab03b_landing.html</id>
+    <updated>2026-02-27T20:48:00Z</updated>
+    <summary>
+      Five-iteration AI-assisted website enhancement project with reflection and iterative prompt refinement.
+    </summary>
+  </entry>
+
+  <entry>
+    <title>Lab 04: RSS and Atom Feeds</title>
+    <link href="/iit/labs/lab03/lab03b/lab04_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab04_landing.html</id>
+    <updated>2026-02-27T20:49:00Z</updated>
+    <summary>
+      XML feed authoring and validation lab covering RSS 2.0 and Atom 1.0 feed structure and deployment checks.
+    </summary>
+  </entry>
+</feed>

@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+rss,
+feed {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: linear-gradient(160deg, #071327, #0f1f3b);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+channel,
+entry {
+  display: block;
+}
+
+channel,
+feed {
+  max-width: 980px;
+  margin: 1.5rem auto;
+  padding: 1.2rem 1.3rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.78);
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.35);
+}
+
+channel > title,
+feed > title {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+channel > description,
+feed > subtitle {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #c7d2fe;
+}
+
+channel > link,
+feed > link[rel="self"] {
+  display: block;
+  margin-bottom: 1rem;
+  color: #93c5fd;
+}
+
+item,
+entry {
+  display: block;
+  margin: 0.75rem 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.65);
+}
+
+item > title,
+entry > title {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e0e7ff;
+  margin-bottom: 0.35rem;
+}
+
+item > link,
+entry > link {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #60a5fa;
+}
+
+guid,
+entry > id,
+feed > id {
+  display: none;
+}
+
+item > link,
+entry > link {
+  display: block;
+  margin: 0.1rem 0 0.5rem;
+  color: #93c5fd;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+}
+
+channel > link {
+  display: block;
+  margin-bottom: 1rem;
+  color: #93c5fd;
+}
+
+item > description,
+entry > summary,
+entry > content {
+  display: block;
+  color: #dbeafe;
+  line-height: 1.55;
+}
+
+pubDate,
+updated {
+  display: block;
+  margin-top: 0.4rem;
+  color: #94a3b8;
+  font-size: 0.86rem;
+}
