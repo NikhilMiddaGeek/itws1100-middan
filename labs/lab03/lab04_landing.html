@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab 04: RSS &amp; Atom Feeds</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./lab03b/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Lab 04: RSS &amp; Atom Feeds</h1>
+  <nav>
+    <a href="./lab03b/homepage.html">Home</a>
+    <a href="./lab03b/lab_landing.html">Labs</a>
+    <a href="./lab03b/index.html">Projects</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Description</h2>
+  <p>
+    Create valid RSS 2.0 and Atom 1.0 XML feeds for your personal website with
+    proper structure, complete content, and deploy them to the live Azure site.
+  </p>
+
+  <h2>Validation Requirements</h2>
+  <ul>
+    <li>Both XML feeds must be well-formed and parse correctly</li>
+    <li>RSS 2.0 required channel elements: title, link, description</li>
+    <li>Atom 1.0 required feed elements: title, id, updated, author</li>
+    <li>Feeds should comply with RSS 2.0 and Atom 1.0 specifications</li>
+  </ul>
+
+  <h2>Content Requirements</h2>
+  <ul>
+    <li>Minimum 4 items/entries in each feed</li>
+    <li>RSS items: title, link, description</li>
+    <li>Atom entries: title, id, updated, content or summary</li>
+    <li>Items should link to actual lab pages (Lab 1, Lab 2, Lab 3, and more if available)</li>
+  </ul>
+
+  <h2>Styling &amp; Workflow Checks</h2>
+  <ul>
+    <li>Include XML stylesheet processing instruction (`<?xml-stylesheet ... ?>`)</li>
+    <li>Provide a CSS file for feed presentation (`rss.css` or equivalent)</li>
+    <li>Use a dedicated `lab04` branch with visible commit progression</li>
+    <li>Show PR workflow and include Lab 04 documentation in README</li>
+  </ul>
+
+  <h2>Live Verification</h2>
+  <ul>
+    <li>RSS feed URL is accessible on Azure and parses correctly</li>
+    <li>Atom feed URL is accessible on Azure and parses correctly</li>
+    <li>Linked pages resolve correctly from feed entries</li>
+  </ul>
+
+  <h2>Rubric Breakdown</h2>
+  <ul>
+    <li>XML Validity (15%)</li>
+    <li>Feed Structure (15%)</li>
+    <li>Content Completeness (25%)</li>
+    <li>Styling &amp; Presentation (10%)</li>
+    <li>Workflow (35%)</li>
+  </ul>
+
+  <h2>Common Deductions To Avoid</h2>
+  <ul>
+    <li>Invalid XML syntax</li>
+    <li>Missing required RSS/Atom elements</li>
+    <li>Fewer than 4 items/entries</li>
+    <li>Copied example content without personalization</li>
+    <li>No `lab04` branch workflow or feeds not deployed</li>
+  </ul>
+</main>
+
+<footer>
+  <p>Nikhil Midda &middot; ITWS 1100</p>
+</footer>
+
+</body>
+</html>
