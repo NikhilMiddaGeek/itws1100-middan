@@ -12,8 +12,8 @@
 
   <entry>
     <title>Lab 01: VM, GitHub and Azure Setup</title>
-    <link href="/iit/labs/lab03/lab03b/lab01_landing.html" />
-    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab01_landing.html</id>
+    <link href="/iit/labs/lab1/lab01_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab1/lab01_landing.html</id>
     <updated>2026-02-27T20:45:00Z</updated>
     <summary>
       Environment setup workflow including Azure VM, GitHub configuration, and initial deployment setup.
@@ -22,8 +22,8 @@
 
   <entry>
     <title>Lab 02: Semantic HTML Resume</title>
-    <link href="/iit/labs/lab03/lab03b/lab02_landing.html" />
-    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab02_landing.html</id>
+    <link href="/iit/labs/lab02/lab02_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab02/lab02_landing.html</id>
     <updated>2026-02-27T20:46:00Z</updated>
     <summary>
       Resume development using semantic HTML structure with improved styling and content organization.
@@ -32,8 +32,8 @@
 
   <entry>
     <title>Lab 03: Personal Website</title>
-    <link href="/iit/labs/lab03/lab03b/lab03_landing.html" />
-    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab03_landing.html</id>
+    <link href="/iit/labs/lab03/lab03_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03_landing.html</id>
     <updated>2026-02-27T20:47:00Z</updated>
     <summary>
       Multi-page personal website with consistent layout, navigation, validation, and deployment workflow.
@@ -42,8 +42,8 @@
 
   <entry>
     <title>Lab 03b: AI-Assisted Web Development Enhancement</title>
-    <link href="/iit/labs/lab03/lab03b/lab03b_landing.html" />
-    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab03b_landing.html</id>
+    <link href="/iit/labs/lab03/lab03b_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b_landing.html</id>
     <updated>2026-02-27T20:48:00Z</updated>
     <summary>
       Five-iteration AI-assisted website enhancement project with reflection and iterative prompt refinement.
@@ -52,8 +52,8 @@
 
   <entry>
     <title>Lab 04: RSS and Atom Feeds</title>
-    <link href="/iit/labs/lab03/lab03b/lab04_landing.html" />
-    <id>tag:nikhilmidda,2026:/iit/labs/lab03/lab03b/lab04_landing.html</id>
+    <link href="/iit/labs/lab04/lab04updated_landing.html" />
+    <id>tag:nikhilmidda,2026:/iit/labs/lab04/lab04updated_landing.html</id>
     <updated>2026-02-27T20:49:00Z</updated>
     <summary>
       XML feed authoring and validation lab covering RSS 2.0 and Atom 1.0 feed structure and deployment checks.
