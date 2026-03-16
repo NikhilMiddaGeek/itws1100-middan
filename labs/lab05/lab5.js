@@ -68,7 +68,9 @@
       return;
     }
 
+    event.preventDefault();
     alert("Form saved successfully!");
+    window.location.href = "lab5_saved.html";
   }
 
   function clearDefaultCommentsText(textarea) {
