@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <title>ITWS1100 Lab 6 : jQuery</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+   ></script>
+   <script>
+      if (!window.jQuery) {
+         document.write('<script src="resources/jquery-3.6.1.min.js"><\\/script>');
+      }
+   </script>
+   <script src="lab6.js"></script>
+   <link rel="stylesheet" href="lab6.css" type="text/css" />
+</head>
+
+<body>
+   <div id="bodyBlock">
+      <header class="page-header">
+         <div class="header-copy">
+            <h1>Lab 06: <em class="myName">Your Name</em></h1>
+            <p class="subtitle">
+               jQuery DOM manipulation and event handling (hide/show, toggle classes, and dynamic list items).
+            </p>
+         </div>
+         <div class="header-actions">
+            <button type="button" id="labButton" class="btn btn-secondary">Lab 6 Button</button>
+            <button type="button" id="AddListItem" class="btn btn-primary">Add list item</button>
+         </div>
+      </header>
+
+      <main class="grid">
+         <section class="card">
+            <h2 class="card-title">Interactive List</h2>
+            <p class="card-note">Click any list item to toggle the red style.</p>
+            <ul id="labList" class="lab-list">
+               <li>List item 1</li>
+               <li>List item 2</li>
+               <li>List item 3</li>
+               <li>List item 4</li>
+               <li>List item 5</li>
+            </ul>
+         </section>
+
+         <section class="card" id="showHideBlock">
+            <div class="card-top">
+               <h2 class="card-title">Show / Hide Text</h2>
+               <nav id="showHideLinks" class="link-row" aria-label="Text controls">
+                  <a href="#" id="toggleText">Toggle Text</a>
+                  <span class="divider" aria-hidden="true">•</span>
+                  <a href="#" id="hideText">Hide Text</a>
+                  <span class="divider" aria-hidden="true">•</span>
+                  <a href="#" id="showText">Show Text</a>
+               </nav>
+            </div>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+               ullamcorper metus sit amet velit ultrices quis congue nisl mollis.
+               Proin nec orci eget nisl vehicula elementum. Vestibulum ante ipsum
+               primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+               Phasellus lacinia dui sed diam tempor volutpat. Aliquam rutrum, urna
+               vel dictum posuere, lacus magna imperdiet ligula, a imperdiet tellus
+               sapien ac tellus. Sed bibendum adipiscing euismod. Phasellus sed
+               adipiscing libero. Donec ut arcu tortor, non fringilla magna.
+               Suspendisse vel ante arcu. Quisque ut dolor eget sem varius rhoncus
+               fringilla ac ipsum. Nullam eget erat augue, consequat laoreet tellus.
+               In et aliquet neque. Maecenas in erat turpis, id porta lectus. Sed
+               vulputate, turpis vel pharetra tincidunt, quam nisi lacinia massa,
+               sit amet hendrerit dolor mauris sed quam. Cras et eros sed nulla
+               posuere sodales.
+            </p>
+            <p>
+               Nunc vel lectus a mi suscipit cursus vitae vel metus. Ut vitae mauris
+               sed magna malesuada facilisis quis at urna. Fusce sit amet ullamcorper
+               lectus. Proin interdum orci et est cursus consectetur convallis mauris
+               placerat. Duis bibendum felis vel sapien auctor consequat. Fusce
+               rutrum aliquet eros, interdum egestas neque ultricies quis. Aliquam
+               erat volutpat. Nulla facilisi. Morbi pharetra hendrerit mattis.
+               Praesent vel gravida odio. Vestibulum ultricies ante eu lorem
+               tincidunt eu facilisis odio fermentum.
+            </p>
+         </section>
+      </main>
+
+   </div>
+</body>
+
+</html>
