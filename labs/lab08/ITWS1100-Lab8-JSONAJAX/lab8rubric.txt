@@ -1,0 +1,9 @@
+Dynamic Website
+
+Basic Functionality - 5
+   JSON well formed and described.
+   JSON and Javascript written specifically for use in personal website (NOT just copying examples/names/etc.)
+Documentation - 2
+   Code has comments where necessary to explain certain features/decisions.  Readme file is included
+Creativity - 3
+   Website has a personal flair. (ie, jQueryUI elements included, nice imagery, or extra detail in the menu, etc...)

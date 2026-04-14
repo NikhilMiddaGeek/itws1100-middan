@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "title": "Lab 01: VM, GitHub & Azure Setup",
+      "description": "Configured Azure VM hosting, GitHub repo workflow, and initial web server setup.",
+      "link": "labs/lab1/lab01_landing.html"
+    },
+    {
+      "title": "Lab 02: HTML Resume",
+      "description": "Built a semantic HTML resume page with styling and a deliverable resume link.",
+      "link": "labs/lab02/lab02_landing.html"
+    },
+    {
+      "title": "Lab 03b: AI-Assisted Web Development Enhancement",
+      "description": "Iteratively improved site design/structure using AI collaboration and documented iterations.",
+      "link": "labs/lab03/lab03b_landing.html"
+    },
+    {
+      "title": "Lab 04 Updated: RSS & Atom Feeds",
+      "description": "Created and validated RSS/Atom feeds, linked items to real pages, and deployed to Azure.",
+      "link": "labs/lab04/lab04updated_landing.html"
+    },
+    {
+      "title": "Lab 05: JavaScript Form Validation",
+      "description": "Implemented client-side form validation and interaction with external JS and CSS.",
+      "link": "labs/lab05/lab05_landing.html"
+    },
+    {
+      "title": "Lab 06: jQuery DOM Manipulation",
+      "description": "Used jQuery events and DOM updates to toggle UI, animate changes, and add items dynamically.",
+      "link": "labs/lab06/lab06_landing.html"
+    },
+    {
+      "title": "Lab 08: JSON & AJAX Dynamic Projects Page",
+      "description": "Loads this JSON file with AJAX and builds the Projects menu dynamically with jQuery/jQueryUI.",
+      "link": "labs/lab03/lab03b/lab08_landing.html"
+    }
+  ]
+}

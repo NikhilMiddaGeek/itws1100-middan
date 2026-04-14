@@ -5,6 +5,8 @@
   <title>Projects | Nikhil Midda</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lab8.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 </head>
 <body>
 
@@ -50,8 +52,19 @@
 	  </section>
 	
 	  <section class="projects-list">
-	    <h2>Latest Lab</h2>
-	    <p><a href="../../lab06/lab06_landing.html">Lab 06: jQuery DOM Manipulation</a></p>
+	    <h2>Projects &amp; Labs</h2>
+      <p>
+        This section is generated dynamically from a JSON file (Lab 08). Add new entries to the JSON file to update this menu
+        without editing this HTML.
+      </p>
+
+      <div id="projectsStatus" class="lab8-status" role="status">
+        Loading projects...
+      </div>
+
+      <div id="projectsMenu" data-json="lab8-menu.json?v=20260414">
+        <p>If you see this message, JavaScript failed to load.</p>
+      </div>
 	  </section>
 	
 	  <section class="projects-list">
@@ -73,6 +86,15 @@
 <footer>
   <p>Nikhil Midda · ITWS 1100</p>
 </footer>
+
+<!-- jQuery must be served from a CDN (Lab 08 requirement) -->
+<script async src="https://code.jquery.com/jquery-3.7.1.min.js"
+        onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js';"></script>
+<!-- jQueryUI enhancement (served from CDN) -->
+<script async src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"
+        onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.13.3/jquery-ui.min.js';"></script>
+<!-- Lab 08 external JavaScript (must be external, not inline) -->
+<script defer src="lab8.js?v=20260414"></script>
 
 </body>
 </html>

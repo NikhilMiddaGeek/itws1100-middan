@@ -1,0 +1,105 @@
+/* Match Lab03b theme variables (defined in labs/lab03/lab03b/style.css). */
+.lab8-status {
+  margin: 0.75rem 0 0.25rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: rgba(14, 28, 54, 0.72);
+  color: #c7d2fe;
+}
+
+/* Prevent the big blank bar when status text is cleared. */
+.lab8-status:empty {
+  display: none;
+}
+
+.lab8-status-error {
+  border-color: rgba(248, 113, 113, 0.65);
+  background: rgba(127, 29, 29, 0.35);
+  color: #fecaca;
+}
+
+.lab8-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.75rem 0 1rem;
+  color: #c7d2fe;
+  font-size: 0.95rem;
+}
+
+.lab8-filter input[type="text"] {
+  width: min(520px, 100%);
+  padding: 0.55rem 0.7rem;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: rgba(10, 19, 38, 0.64);
+  color: #f8fafc;
+}
+
+.lab8-filter input[type="text"]::placeholder {
+  color: rgba(199, 210, 254, 0.7);
+}
+
+.lab8-filter input[type="text"]:focus {
+  outline: 2px solid rgba(91, 140, 255, 0.55);
+  outline-offset: 2px;
+}
+
+.lab8-open-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  color: #99f6e4;
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  background: rgba(13, 148, 136, 0.2);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.lab8-open-link:hover,
+.lab8-open-link:focus {
+  transform: translateY(-1px);
+  border-color: rgba(45, 212, 191, 0.55);
+  background: rgba(13, 148, 136, 0.28);
+}
+
+.lab8-accordion h3.lab8-acc-header {
+  cursor: pointer;
+  user-select: none;
+  margin: 0.5rem 0 0;
+  padding: 0.75rem 0.85rem;
+  border-radius: 14px;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: rgba(14, 28, 54, 0.64);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.lab8-accordion h3.lab8-acc-header:focus {
+  outline: 2px solid rgba(30, 136, 229, 0.6);
+  outline-offset: 2px;
+}
+
+.lab8-accordion h3.lab8-acc-header:hover {
+  transform: translateY(-1px);
+  border-color: rgba(45, 212, 191, 0.45);
+  background: rgba(18, 40, 66, 0.78);
+}
+
+.lab8-acc-panel {
+  display: none;
+  margin-top: 0.55rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 14px;
+  background: rgba(10, 19, 38, 0.64);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  color: #c7d2fe;
+}
+
+.lab8-acc-panel.lab8-panel-open {
+  display: block;
+}

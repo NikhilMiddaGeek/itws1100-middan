@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 08: JSON &amp; AJAX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Lab 08: JSON &amp; AJAX</h1>
+  <nav>
+    <a href="homepage.html">Home</a>
+    <a href="lab_landing.html">Labs</a>
+    <a href="index.html">Projects</a>
+  </nav>
+</header>
+
+<main class="labs-main">
+  <section class="labs-hero">
+    <div class="labs-hero-copy">
+      <span class="hero-tag">Dynamic Content</span>
+      <h2>Projects Menu From JSON</h2>
+      <p>
+        Create dynamic content loading with JSON data and AJAX requests. The Projects page loads a JSON file, validates its
+        structure, and builds the Projects &amp; Labs menu dynamically (no hardcoded list). Adding a new item to the JSON
+        updates the menu without editing the Projects page HTML.
+      </p>
+      <div class="labs-meta">
+        <span>JSON + AJAX</span>
+        <span>DOM Rendering</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="labs-list">
+    <h2>Lab 08 Projects Page</h2>
+    <div class="lab-card-grid">
+      <a class="lab-card" href="index.html">
+        <h3>Open Projects</h3>
+        <p>Lab 08 runs here: loads JSON and renders the menu dynamically.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="labs-list">
+    <h2>Rubric Checklist</h2>
+    <div class="lab-card-grid">
+      <article class="project-card">
+        <h3>JSON File</h3>
+        <p>Valid JSON; proper structure with a <code>projects</code> array; personalized lab/project entries.</p>
+      </article>
+
+      <article class="project-card">
+        <h3>JavaScript / AJAX</h3>
+        <p>External JS loads JSON via AJAX (<code>fetch</code>), validates fields, and dynamically builds the DOM.</p>
+      </article>
+
+      <article class="project-card">
+        <h3>Error Handling</h3>
+        <p>Gracefully handles fetch/parse errors with a clear on-page message.</p>
+      </article>
+
+      <article class="project-card">
+        <h3>jQuery / jQueryUI Enhancement</h3>
+        <p>jQuery loads from a CDN; if jQueryUI is available, the menu upgrades to an accordion + fade-in.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Nikhil Midda &middot; ITWS 1100</p>
+</footer>
+
+</body>
+</html>
