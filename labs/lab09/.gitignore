@@ -1,0 +1,7 @@
+# Local secrets/config
+config.local.php
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
