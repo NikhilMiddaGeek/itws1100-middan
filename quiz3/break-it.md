@@ -57,9 +57,9 @@ $byPage = $stmtPages->fetchAll();
 ```
 
 Why this prevents SQL injection:
-- The SQL **structure** (keywords, operators) is fixed.
+- The SQL structure (keywords, operators) is fixed.
 - User input is passed as a **value**, not as executable SQL.
-- The database never interprets the attacker’s quotes/operators as part of the query logic.
+- The database never interprets the attacker’s opearators part of the logic.
 
 ---
 
@@ -68,8 +68,7 @@ Why this prevents SQL injection:
 ### A) The vulnerable version (raw HTML output)
 The dashboard builds HTML in JavaScript from data returned by `quiz3/api/recent.php`. If I remove escaping and insert values directly into `innerHTML`, the page becomes vulnerable.
 
-Example vulnerable change to `quiz3/assets/analytics.js` (do **not** deploy this):
-
+Example:
 ```js
 // BAD: vulnerable to XSS
 tbody.innerHTML = rows.map(v => {
@@ -83,21 +82,18 @@ tbody.innerHTML = rows.map(v => {
 ```
 
 ### B) A malicious input that exploits it
-An attacker can store a script payload in a field that later gets displayed on the dashboard. For example, they can send a crafted title to the logging endpoint:
+An attacker can store a script payload in a field that later gets displayed on the dashboard. 
 
+Example:
 ```html
 <script>alert('hacked')</script>
 ```
 
-If that value gets stored in the database and then rendered as raw HTML on the dashboard, the script executes in the admin’s browser.
+If that value gets stored in the database and  rendered as raw HTML the script executes in the admin’s browse
 
-### C) What would happen in the browser / why it matters
-When the dashboard loads “Recent Visits”, the injected `<script>` would run and pop an alert. In a real attack, it could:
-- steal session/auth info (if cookies are accessible),
-- change what the admin sees on the dashboard,
-- send requests as the admin (CSRF-like behavior via JavaScript).
 
-### D) The original safe code + why it prevents this attack
+
+### C) The original safe code + why it prevents this attack
 My safe code in `quiz3/assets/analytics.js` escapes values before inserting into HTML:
 
 ```js
@@ -108,12 +104,11 @@ function escapeText(value) {
 }
 ```
 
-And then uses it when rendering:
 
 ```js
 const title = escapeText(v.page_title || "");
 ```
 
 Why this prevents XSS:
-- `textContent` forces the browser to treat attacker input as **text**, not HTML.
-- So `<script>...</script>` is displayed literally (or safely encoded) instead of executing.
+- `textContent` forces the browser to treat attacker input as text, not HTML.
+- So `<script>..</script>` is displayed literally instead of executi.

@@ -84,7 +84,7 @@ Adjusted `quiz3/.htaccess` to protect only the dashboard, and added `quiz3/api/.
 **Kept / changed / removed (why):**
 - **Kept:** Dashboard protection.
 - **Changed:** Added an override `.htaccess` in `quiz3/api/` because `/iit/.htaccess` enforced auth globally.
-- **Removed:** Blanket auth over the whole `quiz3/` folder (breaks JS API calls).
+
 
 ---
 
