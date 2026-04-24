@@ -8,6 +8,7 @@
 
 ## Live Links (Azure)
 - Analytics dashboard: `http://middanrpi1.eastus.cloudapp.azure.com/iit/quiz3/dashboard.php`
+-  **IMPORTANT**: CHANGE END DATE TO CLEAR TO SEE ACTVITY
 
 ## What this feature does
 - Logs visits to pages on this site into MySQL 
