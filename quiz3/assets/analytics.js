@@ -122,16 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Initial load: last 7 days.
-  const now = new Date();
-  const start = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-  const pad = (n) => String(n).padStart(2, "0");
-  const toLocalInput = (d) =>
-    `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  // Initial load: show all visits (no filters) so totals match the DB.
+  // Filters are optional and can be applied by clicking "Apply".
+  document.getElementById("start").value = "";
+  document.getElementById("end").value = "";
 
-  document.getElementById("start").value = toLocalInput(start);
-  document.getElementById("end").value = toLocalInput(now);
-
-  loadDashboard(readFiltersFromForm()).catch((err) => setStatus(`Error: ${err.message}`));
+  loadDashboard({ start: "", end: "", page_path: "" }).catch((err) => setStatus(`Error: ${err.message}`));
 });
-
