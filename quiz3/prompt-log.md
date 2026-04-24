@@ -77,8 +77,6 @@ VM deployment steps using `git fetch`, `git checkout -b quiz3 origin/quiz3`, and
 My dashboard JS `fetch()` calls to `/iit/quiz3/api/*.php` are failing with `401 Unauthorized`. Diagnose `.htaccess` scope and inheritance. Provide an exact fix so:
 - `dashboard.php` remains protected 
 - the API endpoints and the JS tracker can access `/quiz3/api/*` without being blocked
-- parent `/var/www/html/iit/.htaccess` is overridden only for `quiz3/api/`
-Include a `curl` verification sequence.
 
 **AI returned :**
 Adjusted `quiz3/.htaccess` to protect only the dashboard, and added `quiz3/api/.htaccess` 
@@ -124,7 +122,7 @@ Updated tracker base-path logic so it posts to `/iit/quiz3/api/log_visit.php` an
 ---
 
 ## Prompt 8 — Dashboard shows 0 while DB/API show 20 (filters/autofill)
-**Prompt (engineered):**
+**Prompt :**
 My DB count and unfiltered API show `total_visits=20`, but the dashboard shows 0. Provide a debugging workflow:
 - inspect the Network request URL for `api/summary.php` and confirm whether `start/end` filters are being sent
 - compare the filtered response vs unfiltered response
