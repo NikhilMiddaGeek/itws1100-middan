@@ -1,60 +1,22 @@
 # D3 — Code Walkthrough (Quiz 3 Option B)
 
-## 1) Database schema (3 pts)
-I created one table: `site_visits` (see `quiz3/sql/schema.sql`).
+1) Database schema
+I set up one table called site_visits to hold everything the tracker logs.
+Each row gets a unique ID that increments automatically, plus a field for the URL path of the page that was visited stored as text since paths are words and slashes, not numbers. I also capture the page title, where the visitor came from, and what browser they were using, though those last three are optional since they're not always available.
+For privacy, I don't store raw IP addresses. Instead I run the IP through a SHA-256 hash , which gives me a consistent 64-character fingerprint I can use to spot repeat visitors without ever knowing who they actually are.
+Finally, there's a timestamp for when the visit happened, and two indexes one on the timestamp for pulling recent visits quickly, and one on the page path for counting visits per page without scanning the whole table.
 
-- `id` (INT, auto-increment): unique row id for each visit.
-- `page_path` (VARCHAR(255), NOT NULL): the URL path that was visited (example: `/iit/labs/lab04/homepage_updated.html`). Stored as text because paths aren’t numeric.
-- `page_title` (VARCHAR(255), NULL): the page’s `<title>` (optional).
-- `referrer` (VARCHAR(255), NULL): where the visitor came from (optional).
-- `user_agent` (VARCHAR(255), NULL): browser info from the request header (optional).
-- `ip_hash` (CHAR(64), NULL): SHA-256 hash of the visitor IP (privacy-friendly; fixed length = 64 hex chars).
-- `visited_at` (DATETIME, default current timestamp): when the visit was logged.
-- Indexes:
-  - `idx_visited_at` speeds up “recent visits” queries.
-  - `idx_page_path` speeds up “count by page” queries.
+2) Logging a visit (the "write" side)
+When someone loads one of my pages, a small script runs in the background and silently sends the visit info to a PHP endpoint on the server.
+That endpoint checks that the request came in correctly, then reads three things the script sent over: the page path, the page title, and the referrer. It cleans up the values, trimming them to safe lengths and hashes the visitor's IP before anything touches the database.
+Then it saves the row using a prepared statement. This is the security-critical part: instead of building the SQL by gluing the user's input into a string , it passes the values separately so the database always treats them as plain data. The endpoint responds with a simple "ok" so the page knows it worked.
 
-## 2) PHP “write” path (3 pts)
-User action: a visitor loads a page that includes the tracker script (`quiz3/assets/track.js`). That script sends a POST request to `quiz3/api/log_visit.php`.
+3) Displaying the data 
+The dashboard page pulls its data from two separate endpoints — one that returns summary totals (overall visit count plus a breakdown by page), and one that returns the most recent visits in reverse chronological order.
+Both endpoints accept optional filters a date range or a specific page path — and only apply them if they're actually provided. The filtering is also done with prepared statements for the same reason as above: no raw user input ever gets concatenated into a query string.
+The results come back as JSON, which the dashboard's JavaScript picks up and renders into the page.
 
-In `quiz3/api/log_visit.php`:
-1. It requires `quiz3/inc/db.php` so it can connect to MySQL with PDO.
-2. It checks the request is `POST` (rejects other methods).
-3. It reads the submitted data (JSON body first, then form-style POST fields as a fallback):
-   - `page_path`, `page_title`, `referrer`
-4. It sanitizes/clamps strings to safe lengths and normalizes `page_path` to a clean path.
-5. It computes `ip_hash` from the request IP plus the secret salt in `quiz3/config.local.php`.
-6. It inserts the row with a prepared statement:
-   - SQL uses placeholders (`:page_path`, `:page_title`, etc.)
-   - `execute([...])` binds real values separately so user input can’t break the SQL.
-7. It returns JSON `{ "ok": true }` (or an error JSON if something fails).
-
-Why prepared statements matter: inputs like `page_path` come from the browser (user-controlled). Using placeholders prevents SQL injection because the database treats the inputs as data, not executable SQL.
-
-## 3) PHP “read” path (3 pts)
-The dashboard page (`quiz3/dashboard.php`) loads JavaScript that requests summary data from:
-- `quiz3/api/summary.php` (totals + counts per page)
-- `quiz3/api/recent.php` (newest visits first)
-
-In `quiz3/api/summary.php` and `quiz3/api/recent.php`:
-1. They accept optional filter values from query parameters:
-   - `start`, `end`, `page_path`
-2. They build a `WHERE` clause only for filters that are present, and bind those values with a prepared statement (no string-concatenated user input).
-3. They run SELECT queries using PDO:
-   - `summary.php` computes total visit count and a grouped “visits per page” list.
-   - `recent.php` returns the most recent rows ordered by time.
-4. They output JSON that the browser can render.
-
-## 4) Client-side JavaScript (3 pts)
-There are two main JS files:
-
-- `quiz3/assets/track.js` (logging):
-  - Runs on page load.
-  - Collects `location.pathname`, `document.title`, and `document.referrer`.
-  - Sends a POST to `quiz3/api/log_visit.php` using `navigator.sendBeacon()` (fallback `fetch()`).
-
-- `quiz3/assets/analytics.js` (dashboard UI):
-  - Calls `fetch()` to load JSON from `api/summary.php` and `api/recent.php`.
-  - Updates the page by filling the “total visits” number and generating table rows from the returned JSON.
-  - When the user clicks **Apply**, it re-fetches with any chosen filters and re-renders without a full page reload.
-
+4) The JavaScript side
+There are two scripts doing different jobs.
+The tracker runs quietly on every page. As soon as the page loads, it grabs the current URL, the page title, and the referrer, then fires that info off to the logging endpoint in the background, using a browser API specifically designed for this kind of "send and forget" logging so it doesn't slow the page down.
+The dashboard script is the opposite , it's all about showing things. It fetches the summary and recent visits data, then writes the results into the page: filling in the total visit count and building out the data tables row by row. When someone adjusts the filters and clicks Apply, it refetches and re-renders just the data without reloading the whole page.
