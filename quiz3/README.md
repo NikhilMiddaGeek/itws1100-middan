@@ -1,7 +1,7 @@
 # Quiz 3 — Option B: Site Analytics Dashboard
 
 ## Live URL (Azure)
-- Dashboard: `https://YOUR-FQDN-HERE/quiz3/dashboard.php`
+- Dashboard: `https://YOUR-FQDN-HERE/iit/quiz3/dashboard.php`
 
 ## What this feature does
 - Logs visits to pages on this site into MySQL (write path).
@@ -58,7 +58,7 @@ These pages include the tracker and a dashboard link:
 - `labs/lab03/lab03b/index.html`
 
 Each page loads:
-- `<script src="/quiz3/assets/track.js" defer></script>`
+- The tracker script is included with a relative path to `quiz3/assets/track.js`.
 
 ## Technical requirements checklist
 - MySQL table designed by me: `site_visits` (see CREATE TABLE above)
@@ -74,4 +74,3 @@ Each page loads:
   - Add your FQDN URL at the top of this README
 - File organization:
   - Everything for this feature lives under `quiz3/`
-
