@@ -18,7 +18,7 @@ declare(strict_types=1);
         <div class="muted">Quiz 3 — Option B (PHP + MySQL + JS)</div>
       </div>
       <div class="muted">
-        <a href="../labs/lab04/homepage_updated.html">Home</a>
+        <a href="/iit/labs/lab04/homepage_updated.html">Home</a>
       </div>
     </header>
 

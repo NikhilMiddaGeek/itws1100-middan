@@ -18,7 +18,7 @@ declare(strict_types=1);
         <div class="muted">Site Analytics Dashboard</div>
       </div>
       <div class="muted">
-        <a href="../labs/lab04/homepage_updated.html">Home</a>
+        <a href="/iit/labs/lab04/homepage_updated.html">Home</a>
       </div>
     </header>
 
