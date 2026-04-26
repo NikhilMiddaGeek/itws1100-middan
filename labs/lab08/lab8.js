@@ -44,9 +44,10 @@
         !item ||
         typeof item.title !== "string" ||
         typeof item.description !== "string" ||
-        typeof item.link !== "string"
+        typeof item.link !== "string" ||
+        typeof item.secure !== "boolean"
       ) {
-        return "Each project must have 'title', 'description', and 'link' (strings).";
+        return "Each project must have 'title', 'description', 'link' (strings), and 'secure' (boolean).";
       }
     }
 
@@ -73,7 +74,9 @@
     var $accordion = $("<div>", { id: "projectsAccordion", class: "lab8-accordion" });
 
     projects.forEach(function (item) {
-      var safeTitle = item.title;
+      var lockIcon = item.secure ? " \uD83D\uDD12" : "";
+
+      var safeTitle = item.title + lockIcon;
       var safeDesc = item.description;
       var safeLink = item.link;
 
@@ -83,7 +86,11 @@
       $panel.append($("<p>").text(safeDesc));
       $panel.append(
         $("<p>").append(
-          $("<a>", { href: resolveHref(safeLink), class: "lab8-open-link" }).text("Open")
+          $("<a>", {
+            href: resolveHref(safeLink),
+            class: "lab8-open-link",
+            title: item.secure ? "Password required" : "",
+          }).text("Open")
         )
       );
 

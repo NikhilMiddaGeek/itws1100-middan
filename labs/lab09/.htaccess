@@ -3,4 +3,3 @@ AuthName "Restricted Content"
 AuthUserFile /etc/apache2/.htpasswd
 Require valid-user
 
-

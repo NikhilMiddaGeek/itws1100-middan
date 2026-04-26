@@ -49,9 +49,10 @@
         !item ||
         typeof item.title !== "string" ||
         typeof item.description !== "string" ||
-        typeof item.link !== "string"
+        typeof item.link !== "string" ||
+        typeof item.secure !== "boolean"
       ) {
-        return "Each project must have 'title', 'description', and 'link' (strings).";
+        return "Each project must have 'title', 'description', 'link' (strings), and 'secure' (boolean).";
       }
     }
 
@@ -87,10 +88,12 @@
     accordion.className = "lab8-accordion";
 
     projects.forEach(function (item) {
+      var lockIcon = item.secure ? " \uD83D\uDD12" : "";
+
       var header = document.createElement("h3");
       header.className = "lab8-acc-header";
       header.tabIndex = 0;
-      header.textContent = item.title;
+      header.textContent = item.title + lockIcon;
 
       var panel = document.createElement("div");
       panel.className = "lab8-acc-panel";
@@ -103,6 +106,7 @@
       link.className = "lab8-open-link";
       link.href = resolveHref(item.link);
       link.textContent = "Open";
+      if (item.secure) link.title = "Password required";
       linkP.appendChild(link);
 
       panel.appendChild(desc);

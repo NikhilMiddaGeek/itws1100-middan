@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lab 10 - Production Deployment</title>
+</head>
+<body>
+  <h1>Lab 10 - Production Deployment, SSL &amp; Auto-Deploy</h1>
+
+  <p>
+    This lab focuses on deploying the site to production, securing sensitive labs, enabling HTTPS,
+    and setting up GitHub webhook auto-deploy.
+  </p>
+
+  <h2>Repo Deliverables</h2>
+  <ul>
+    <li><code>labs/lab10/index.php</code> (redirect helper)</li>
+    <li><code>labs/lab10/deploy.php</code> (webhook handler reference)</li>
+    <li><code>labs/lab10/README.md</code> (FQDN + repo link)</li>
+  </ul>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>HTTPS and auto-deploy require VM configuration (ports, Certbot, sudoers, GitHub webhook).</li>
+    <li>Protected labs show a lock icon on the Projects page when marked <code>secure: true</code> in JSON.</li>
+  </ul>
+
+  <p><a href="../lab03/lab03b/index.html">Back to Projects</a></p>
+</body>
+</html>

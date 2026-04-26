@@ -3,37 +3,56 @@
     {
       "title": "Lab 01: VM, GitHub & Azure Setup",
       "description": "Configured Azure VM hosting, GitHub repo workflow, and initial web server setup.",
-      "link": "lab01_landing.html"
+      "link": "lab01_landing.html",
+      "secure": true
     },
     {
       "title": "Lab 02: HTML Resume",
       "description": "Built a semantic HTML resume page with styling and a deliverable resume link.",
-      "link": "lab02_landing.html"
+      "link": "lab02_landing.html",
+      "secure": false
     },
     {
       "title": "Lab 03b: AI-Assisted Web Development Enhancement",
       "description": "Iteratively improved site design/structure using AI collaboration and documented iterations.",
-      "link": "../lab03b_landing.html"
+      "link": "../lab03b_landing.html",
+      "secure": false
     },
     {
       "title": "Lab 04 Updated: RSS & Atom Feeds",
       "description": "Created and validated RSS/Atom feeds, linked items to real pages, and deployed to Azure.",
-      "link": "../lab04_landing.html"
+      "link": "../lab04_landing.html",
+      "secure": false
     },
     {
       "title": "Lab 05: JavaScript Form Validation",
       "description": "Implemented client-side form validation and interaction with external JS and CSS.",
-      "link": "../../lab05/lab05_landing.html"
+      "link": "../../lab05/lab05_landing.html",
+      "secure": false
     },
     {
       "title": "Lab 06: jQuery DOM Manipulation",
       "description": "Used jQuery events and DOM updates to toggle UI, animate changes, and add items dynamically.",
-      "link": "../../lab06/lab06_landing.html"
+      "link": "../../lab06/lab06_landing.html",
+      "secure": false
     },
     {
       "title": "Lab 08: JSON & AJAX Dynamic Projects Page",
       "description": "Loads this JSON file with AJAX and builds the Projects menu dynamically with jQuery/jQueryUI.",
-      "link": "lab08_landing.html"
+      "link": "lab08_landing.html",
+      "secure": false
+    },
+    {
+      "title": "Lab 09: PHP & MySQL",
+      "description": "PHP + MySQL app with import/export and server-side functionality.",
+      "link": "../../lab09/index.php",
+      "secure": true
+    },
+    {
+      "title": "Lab 10: Production Deployment, SSL & Auto-Deploy",
+      "description": "Production deployment, selective .htaccess security, HTTPS (Certbot), and GitHub webhook auto-deploy.",
+      "link": "../../lab10/lab10_landing.html",
+      "secure": false
     }
   ]
 }
