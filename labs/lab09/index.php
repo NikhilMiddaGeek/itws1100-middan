@@ -53,7 +53,7 @@ try {
                 throw new RuntimeException('Movie title and year are required.');
             }
 
-            $stmt = db()->prepare('INSERT INTO movies (title, year) VALUES (:title, :year)');
+            $stmt = db()->prepare('INSERT INTO movies (title, `year`) VALUES (:title, :year)');
             $stmt->execute([
                 'title' => $title,
                 'year' => $year,
@@ -154,7 +154,7 @@ try {
         echo "<h2>Movies</h2>\n";
         echo "<small>Rubric: movies.php equivalent lists movies; add/remove uses prepared statements.</small>\n";
 
-        $movies = db()->query('SELECT id, title, year FROM movies ORDER BY year DESC, title')->fetchAll();
+        $movies = db()->query('SELECT id, title, `year` AS year FROM movies ORDER BY `year` DESC, title')->fetchAll();
 
         echo "<table>\n<thead><tr><th>ID</th><th>Title</th><th>Year</th><th>Remove</th></tr></thead>\n<tbody>\n";
         foreach ($movies as $m) {
@@ -188,15 +188,15 @@ try {
         echo "<h2>Movie <-> Actor Relations (Bonus)</h2>\n";
         echo "<small>Rubric bonus: JOIN query showing movies with actors.</small>\n";
 
-        $movies = db()->query('SELECT id, title, year FROM movies ORDER BY year DESC, title')->fetchAll();
+        $movies = db()->query('SELECT id, title, `year` AS year FROM movies ORDER BY `year` DESC, title')->fetchAll();
         $actors = db()->query('SELECT id, first, last FROM actors ORDER BY last, first')->fetchAll();
 
         $rows = db()->query(
-            'SELECT m.id AS movie_id, m.title, m.year, a.id AS actor_id, a.first, a.last
+            'SELECT m.id AS movie_id, m.title, m.`year` AS year, a.id AS actor_id, a.first, a.last
              FROM movie_actors ma
              JOIN movies m ON m.id = ma.movie_id
              JOIN actors a ON a.id = ma.actor_id
-             ORDER BY m.year DESC, m.title, a.last, a.first'
+             ORDER BY m.`year` DESC, m.title, a.last, a.first'
         )->fetchAll();
 
         echo "<table>\n<thead><tr><th>Movie</th><th>Year</th><th>Actor</th><th>Remove</th></tr></thead>\n<tbody>\n";
