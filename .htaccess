@@ -1,0 +1,11 @@
+# Root /iit/ rewrite-only rules (no authentication here).
+# Lab 10 requires selective protection on specific lab folders, not the entire site.
+
+RewriteEngine On
+
+# Friendly lab URLs used in the Lab 10 rubric/instructions.
+RewriteRule ^lab01/?$ labs/lab1/lab01_landing.html [R=302,L]
+RewriteRule ^lab02/?$ labs/lab02/lab02_landing.html [R=302,L]
+RewriteRule ^lab09/?$ labs/lab09/index.php [R=302,L]
+RewriteRule ^lab10/?$ labs/lab10/lab10_landing.html [R=302,L]
+
