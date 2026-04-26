@@ -116,7 +116,6 @@ if ($flashErr) {
 try {
     if ($tab === 'actors') {
         echo "<h2>Actors</h2>\n";
-        echo "<small>Rubric: 5+ actors, at least 3 born before 1965; use prepared statements; escape output.</small>\n";
 
         $actors = db()->query('SELECT id, first, last, birth_date FROM actors ORDER BY last, first')->fetchAll();
 
@@ -152,7 +151,6 @@ try {
 
     if ($tab === 'movies') {
         echo "<h2>Movies</h2>\n";
-        echo "<small>Rubric: movies.php equivalent lists movies; add/remove uses prepared statements.</small>\n";
 
         $movies = db()->query('SELECT id, title, `year` AS year FROM movies ORDER BY `year` DESC, title')->fetchAll();
 
@@ -186,7 +184,6 @@ try {
 
     if ($tab === 'relations') {
         echo "<h2>Movie <-> Actor Relations (Bonus)</h2>\n";
-        echo "<small>Rubric bonus: JOIN query showing movies with actors.</small>\n";
 
         $movies = db()->query('SELECT id, title, `year` AS year FROM movies ORDER BY `year` DESC, title')->fetchAll();
         $actors = db()->query('SELECT id, first, last FROM actors ORDER BY last, first')->fetchAll();
@@ -242,9 +239,7 @@ try {
 
     if ($tab === 'export') {
         echo "<h2>Export Actors CSV</h2>\n";
-        echo "<p>This page exports actors with <strong>birth_date >= 1965-01-01</strong> (rubric requirement).</p>\n";
         echo "<p><a href=\"export_actors_csv.php\">Download actors.csv</a></p>\n";
-        echo "<p><small>Note: You can also export from phpMyAdmin as \"CSV for MS Excel\" and save it as `labs/lab09/actors.csv`.</small></p>\n";
     }
 } catch (Throwable $e) {
     echo '<div class="msg err">' . h($e->getMessage()) . "</div>\n";
