@@ -3,9 +3,16 @@
 
 RewriteEngine On
 
+<<<<<<< Updated upstream
 # Friendly lab URLs used in the Lab 10 rubric/instructions.
 RewriteRule ^lab01/?$ labs/lab1/lab01_landing.html [R=302,L]
 RewriteRule ^lab02/?$ labs/lab02/lab02_landing.html [R=302,L]
 RewriteRule ^lab09/?$ labs/lab09/index.php [R=302,L]
 RewriteRule ^lab10/?$ labs/lab10/lab10_landing.html [R=302,L]
 
+=======
+RewriteRule ^lab01/?$ /iit/labs/lab03/lab03b/lab01_landing.html [R=302,L]
+RewriteRule ^lab02/?$ /iit/labs/lab03/lab03b/lab02_landing.html [R=302,L]
+RewriteRule ^lab09/?$ /iit/labs/lab09/ [R=302,L]
+RewriteRule ^lab10/?$ /iit/labs/lab10/lab10_landing.html [R=302,L]
+>>>>>>> Stashed changes
